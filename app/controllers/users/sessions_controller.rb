@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   private
-
+  #Optimise on error messages and also this method cannot give success results always
   def respond_with(resource, _opts = {})
     render json: { message: 'Logged in successfully.', data: resource }, status: :ok
   end
